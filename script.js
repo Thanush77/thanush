@@ -447,6 +447,103 @@ function initAchievementCards() {
 }
 
 // ============================================
+// PAGE LOADER ANIMATION
+// ============================================
+class PageLoader {
+    constructor() {
+        this.loader = document.querySelector('.page-loader');
+        this.progressBar = document.querySelector('.loader-progress');
+        this.loaderText = document.querySelector('.loader-text');
+        this.progress = 0;
+        this.isLoaded = false;
+
+        if (this.loader && this.progressBar) {
+            this.init();
+        } else {
+            // Fallback if elements missing
+            document.body.classList.add('loaded');
+        }
+    }
+
+    init() {
+        // Start simulated progress
+        this.simulateProgress();
+
+        // Listen for actual window load
+        if (document.readyState === 'complete') {
+            this.handleLoad();
+        } else {
+            window.addEventListener('load', () => this.handleLoad());
+        }
+    }
+
+    simulateProgress() {
+        const interval = setInterval(() => {
+            if (this.progress < 90 && !this.isLoaded) {
+                this.progress += Math.random() * 5;
+                this.updateLoader();
+            } else {
+                clearInterval(interval);
+            }
+        }, 100);
+    }
+
+    handleLoad() {
+        this.isLoaded = true;
+        this.progress = 100;
+        this.updateLoader();
+
+        // Small delay to ensure 100% is seen
+        setTimeout(() => {
+            document.body.classList.add('loaded');
+
+            // Remove loader from DOM after transition to improve performance
+            setTimeout(() => {
+                if (this.loader) {
+                    this.loader.style.display = 'none';
+                }
+            }, 500); // Match CSS transition duration
+        }, 500);
+    }
+
+    updateLoader() {
+        if (this.progressBar) {
+            this.progressBar.style.width = `${Math.min(this.progress, 100)}%`;
+        }
+        if (this.loaderText) {
+            this.loaderText.textContent = `Loading... ${Math.floor(Math.min(this.progress, 100))}%`;
+        }
+    }
+}
+
+// ============================================
+// SCROLL PROGRESS INDICATOR
+// ============================================
+class ScrollProgress {
+    constructor() {
+        this.progressBar = document.querySelector('.scroll-progress');
+        if (this.progressBar) {
+            this.init();
+        }
+    }
+
+    init() {
+        window.addEventListener('scroll', () => {
+            requestAnimationFrame(() => this.updateProgress());
+        });
+        this.updateProgress(); // Initial check
+    }
+
+    updateProgress() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+        this.progressBar.style.width = `${scrollPercent}%`;
+    }
+}
+
+// ============================================
 // INITIALIZE EVERYTHING
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -494,8 +591,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize achievement cards
     initAchievementCards();
 
-    // Add loaded class to body
-    document.body.classList.add('loaded');
+
+
+    // Initialize page loader
+    new PageLoader();
+
+    // Initialize scroll progress
+    new ScrollProgress();
 });
 
 // ============================================
