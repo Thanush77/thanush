@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thanush BD - Full-Stack Software Engineer with 2+ years of experience building scalable enterprise applications. Expert in React, Node.js, Flutter, and Python.">
+    <meta name="keywords" content="Full-Stack Developer, Software Engineer, React, Node.js, Flutter, Python, AWS, Portfolio">
+    <meta name="author" content="Thanush BD">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Thanush BD | Full-Stack Software Engineer">
+    <meta property="og:description" content="Building scalable enterprise solutions that drive real business impact">
+    <meta property="og:type" content="website">
+
+    <title>Thanush BD | Full-Stack Software Engineer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>T</text></svg>">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">T<span>.</span></div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-text">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- Particle Canvas Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">Thanush</span>
+                <span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#achievements" class="nav-link">Impact</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Hire Me</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Open to New Opportunities
+            </div>
+            <h1 class="hero-title">
+                <span class="greeting">Hi, I'm</span>
+                <span class="name">Thanush BD</span>
+            </h1>
+            <div class="hero-subtitle">
+                <span class="static-text">I build</span>
+                <span class="dynamic-text" id="typed-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-description">
+                Full-Stack Software Engineer with <strong>2+ years</strong> of experience building scalable
+                web and mobile applications serving <strong>1000+ users</strong> across construction,
+                environmental monitoring, and defense sectors. I turn complex problems into elegant solutions.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                </a>
+                <a href="thanush_resume.pdf" class="btn btn-secondary" download>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                    </svg>
+                    <span>Download Resume</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="2">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Enterprise Apps</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="1000">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Users Served</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="40">0</span>
+                    <span class="stat-suffix">%</span>
+                    <span class="stat-label">Cost Reduction</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Introduction</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-up">
+                    <p class="about-lead">
+                        I'm a Full-Stack Software Engineer passionate about building scalable,
+                        user-centric applications that solve real-world problems.
+                    </p>
+                    <p>
+                        With experience spanning construction tech, environmental monitoring, and defense sectors,
+                        I've developed a unique perspective on building mission-critical systems that demand
+                        reliability, performance, and security. From real-time IoT platforms processing 10,000+
+                        daily sensor readings to defense-grade communication systems with sub-100ms latency,
+                        I thrive on technical challenges.
+                    </p>
+                    <p>
+                        My expertise spans the full development stack: React and Flutter on the frontend,
+                        Node.js and Python on the backend, with deep experience in cloud infrastructure (AWS, Azure),
+                        databases (PostgreSQL, MongoDB), and DevOps practices. I also bring ML capabilities
+                        with TensorFlow and PyTorch for intelligent system features.
+                    </p>
+                    <p class="about-highlight">
+                        <strong>What drives me:</strong> Building products that have tangible impact.
+                        Whether it's reducing operational costs by 40%, preventing environmental compliance
+                        violations, or protecting construction workers through AI safety monitoring.
+                    </p>
+                </div>
+                <div class="about-details" data-aos="fade-up" data-aos-delay="100">
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="detail-content">
+                            <span class="detail-label">Location</span>
+                            <span class="detail-value">Bengaluru, India</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+                            </svg>
+                        </div>
+                        <div class="detail-content">
+                            <span class="detail-label">Current Role</span>
+                            <span class="detail-value">Full-Stack Developer @ Ecologic</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <div class="detail-content">
+                            <span class="detail-label">Specialization</span>
+                            <span class="detail-value">Full-Stack, IoT, Cloud</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+                            </svg>
+                        </div>
+                        <div class="detail-content">
+                            <span class="detail-label">Education</span>
+                            <span class="detail-value">B.E. Computer Science</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Career Journey</span>
+                <h2 class="section-title">Professional Experience</h2>
+            </div>
+            <div class="timeline">
+                <!-- Ecologic Engineering -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-dot active"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <h3>Ecologic Engineering Pvt Ltd</h3>
+                                <span class="company-location">Bengaluru, India</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-role">Full-Stack Developer</span>
+                                <span class="timeline-date">Oct 2024 - Present</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="timeline-summary">
+                                Leading development of 5 enterprise applications serving 500+ daily users,
+                                reducing manual processes by 60% and improving operational efficiency by 40%.
+                            </p>
+                            <ul class="experience-list">
+                                <li>
+                                    <span class="exp-highlight">CEMS Platform:</span> Engineered real-time monitoring
+                                    system processing 10,000+ daily sensor readings across 15 construction sites
+                                    with 99.9% uptime.
+                                </li>
+                                <li>
+                                    <span class="exp-highlight">Enterprise HRMS:</span> Built HR management system
+                                    with automated payroll for 200+ employees, reducing administrative time by 50%.
+                                </li>
+                                <li>
+                                    <span class="exp-highlight">Water Management App:</span> Created Flutter app
+                                    tracking treated water distribution across 25+ sites, optimizing allocation by 35%.
+                                </li>
+                                <li>
+                                    <span class="exp-highlight">Project Coordinator:</span> Managing timelines and
+                                    stakeholder communication, consistently delivering 20% ahead of schedule.
+                                </li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="tag">React.js</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">PostgreSQL</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">AWS</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">Socket.io</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- L&T Defense -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <h3>L&T Precision Engineering</h3>
+                                <span class="company-location">Defense Division, Bengaluru</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-role">Development Intern</span>
+                                <span class="timeline-date">Feb 2024 - Oct 2024</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <ul class="experience-list">
+                                <li>
+                                    Developed <span class="exp-highlight">mission-critical</span> client-server
+                                    communication system using Modbus TCP/IP, supporting 50+ concurrent device
+                                    connections with <span class="exp-highlight">sub-100ms latency</span>.
+                                </li>
+                                <li>
+                                    Engineered real-time data visualization dashboard for chemical agent detector
+                                    with <span class="exp-highlight">99.99% accuracy</span> for defense applications.
+                                </li>
+                                <li>
+                                    Built project management system with role-based access control, reducing
+                                    team coordination overhead by 35%.
+                                </li>
+                                <li>
+                                    Implemented <span class="exp-highlight">defense-grade security</span> protocols
+                                    including secure authentication and data encryption.
+                                </li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="tag">Angular</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Modbus TCP/IP</span>
+                                <span class="tag">WebSockets</span>
+                                <span class="tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inventron Technologies -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-company">
+                                <h3>Inventron Technologies</h3>
+                                <span class="company-location">Bengaluru, India</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-role">Software Engineering Intern</span>
+                                <span class="timeline-date">Aug 2022 - Sep 2022</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <ul class="experience-list">
+                                <li>
+                                    Developed heart disease prediction ML model achieving
+                                    <span class="exp-highlight">87% accuracy</span> using PyTorch and pandas.
+                                </li>
+                                <li>
+                                    Engineered <span class="exp-highlight">Smart Surveillance System</span> using
+                                    computer vision (OpenCV, YOLO) detecting PPE compliance with 92% precision.
+                                </li>
+                                <li>
+                                    Implemented automated alert system reducing incident response time by 65%.
+                                </li>
+                            </ul>
+                            <div class="experience-tags">
+                                <span class="tag">PyTorch</span>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">YOLO</span>
+                                <span class="tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">
+                    Enterprise-grade applications with real-world impact and measurable results
+                </p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: EAF -->
+                <article class="project-card featured" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-visual">
+                            <!-- Environmental Dashboard Mockup -->
+                            <svg viewBox="0 0 280 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Background -->
+                                <rect x="5" y="5" width="270" height="170" rx="10" fill="rgba(16, 185, 129, 0.08)" stroke="rgba(16, 185, 129, 0.25)" stroke-width="1"/>
+                                <!-- Header Bar -->
+                                <rect x="15" y="15" width="250" height="25" rx="5" fill="rgba(16, 185, 129, 0.15)"/>
+                                <circle cx="30" cy="27" r="6" fill="#10b981"/>
+                                <rect x="45" y="24" width="80" height="7" rx="2" fill="rgba(255,255,255,0.25)"/>
+                                <rect x="200" y="22" width="55" height="11" rx="3" fill="#10b981"/>
+                                <text x="227" y="30" fill="white" font-size="6" text-anchor="middle" font-weight="bold">COMPLIANT</text>
+                                <!-- Industry Categories -->
+                                <rect x="15" y="50" width="60" height="50" rx="6" fill="rgba(239, 68, 68, 0.15)" stroke="rgba(239, 68, 68, 0.4)" stroke-width="1"/>
+                                <circle cx="45" cy="67" r="10" fill="rgba(239, 68, 68, 0.3)"/>
+                                <text x="45" y="70" fill="#ef4444" font-size="8" text-anchor="middle" font-weight="bold">R</text>
+                                <text x="45" y="90" fill="rgba(255,255,255,0.6)" font-size="5" text-anchor="middle">RED</text>
+                                <rect x="80" y="50" width="60" height="50" rx="6" fill="rgba(245, 158, 11, 0.15)" stroke="rgba(245, 158, 11, 0.4)" stroke-width="1"/>
+                                <circle cx="110" cy="67" r="10" fill="rgba(245, 158, 11, 0.3)"/>
+                                <text x="110" y="70" fill="#f59e0b" font-size="8" text-anchor="middle" font-weight="bold">O</text>
+                                <text x="110" y="90" fill="rgba(255,255,255,0.6)" font-size="5" text-anchor="middle">ORANGE</text>
+                                <rect x="145" y="50" width="60" height="50" rx="6" fill="rgba(16, 185, 129, 0.15)" stroke="rgba(16, 185, 129, 0.4)" stroke-width="1"/>
+                                <circle cx="175" cy="67" r="10" fill="rgba(16, 185, 129, 0.3)"/>
+                                <text x="175" y="70" fill="#10b981" font-size="8" text-anchor="middle" font-weight="bold">G</text>
+                                <text x="175" y="90" fill="rgba(255,255,255,0.6)" font-size="5" text-anchor="middle">GREEN</text>
+                                <rect x="210" y="50" width="55" height="50" rx="6" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1"/>
+                                <circle cx="237" cy="67" r="10" fill="rgba(255, 255, 255, 0.15)"/>
+                                <text x="237" y="70" fill="rgba(255,255,255,0.6)" font-size="8" text-anchor="middle" font-weight="bold">W</text>
+                                <text x="237" y="90" fill="rgba(255,255,255,0.6)" font-size="5" text-anchor="middle">WHITE</text>
+                                <!-- Monitoring Indicators -->
+                                <rect x="15" y="110" width="55" height="55" rx="6" fill="rgba(6, 182, 212, 0.1)" stroke="rgba(6, 182, 212, 0.3)" stroke-width="1"/>
+                                <text x="42" y="128" fill="#06b6d4" font-size="7" text-anchor="middle">💧</text>
+                                <text x="42" y="143" fill="#06b6d4" font-size="9" text-anchor="middle" font-weight="bold">WATER</text>
+                                <text x="42" y="155" fill="rgba(255,255,255,0.5)" font-size="5" text-anchor="middle">✓ OK</text>
+                                <rect x="75" y="110" width="55" height="55" rx="6" fill="rgba(139, 92, 246, 0.1)" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1"/>
+                                <text x="102" y="128" fill="#8b5cf6" font-size="7" text-anchor="middle">🌬</text>
+                                <text x="102" y="143" fill="#8b5cf6" font-size="9" text-anchor="middle" font-weight="bold">AIR</text>
+                                <text x="102" y="155" fill="rgba(255,255,255,0.5)" font-size="5" text-anchor="middle">✓ OK</text>
+                                <rect x="135" y="110" width="55" height="55" rx="6" fill="rgba(245, 158, 11, 0.1)" stroke="rgba(245, 158, 11, 0.3)" stroke-width="1"/>
+                                <text x="162" y="128" fill="#f59e0b" font-size="7" text-anchor="middle">🗑</text>
+                                <text x="162" y="143" fill="#f59e0b" font-size="9" text-anchor="middle" font-weight="bold">WASTE</text>
+                                <text x="162" y="155" fill="rgba(255,255,255,0.5)" font-size="5" text-anchor="middle">✓ OK</text>
+                                <rect x="195" y="110" width="70" height="55" rx="6" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1"/>
+                                <text x="230" y="128" fill="#10b981" font-size="7" text-anchor="middle">⚡</text>
+                                <text x="230" y="143" fill="#10b981" font-size="9" text-anchor="middle" font-weight="bold">ENERGY</text>
+                                <text x="230" y="155" fill="rgba(255,255,255,0.5)" font-size="5" text-anchor="middle">✓ OK</text>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">Full-Stack Platform</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">BioGraph</h3>
+                        <p class="project-subtitle">Digital Transformation for Environmental Compliance</p>
+                        <p class="project-description">
+                            Comprehensive platform replacing India's paper-based Form V environmental audit
+                            workflow with an intelligent, automated compliance system used across pharmaceutical,
+                            chemical, and manufacturing industries.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Multi-tenant architecture with RED/ORANGE/GREEN/WHITE industry categories</li>
+                            <li>Real-time environmental monitoring for water, air, waste, and energy</li>
+                            <li>Redis caching reducing queries by <strong>60%</strong></li>
+                            <li>Multi-format export (PDF, DOCX, Excel, CSV) for regulatory submissions</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>React.js</span>
+                            <span>PostgreSQL</span>
+                            <span>Redis</span>
+                            <span>TensorFlow</span>
+                            <span>AWS</span>
+                        </div>
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <span class="impact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                    </svg>
+                                </span>
+                                <span>60% Faster Queries</span>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </span>
+                                <span>MoEFCC Compliant</span>
+                                <span>KSPCB Compliant</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Prestige Park Groove -->
+                <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-visual">
+                            <!-- IoT Dashboard Mockup -->
+                            <svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Background Card -->
+                                <rect x="10" y="10" width="180" height="120" rx="8" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1"/>
+                                <!-- Header -->
+                                <rect x="20" y="20" width="160" height="20" rx="4" fill="rgba(16, 185, 129, 0.2)"/>
+                                <circle cx="32" cy="30" r="5" fill="#10b981"/>
+                                <rect x="45" y="27" width="60" height="6" rx="2" fill="rgba(255,255,255,0.3)"/>
+                                <!-- Stats Cards -->
+                                <rect x="20" y="50" width="50" height="35" rx="4" fill="rgba(6, 182, 212, 0.2)" stroke="rgba(6, 182, 212, 0.3)" stroke-width="1"/>
+                                <text x="45" y="65" fill="#06b6d4" font-size="10" text-anchor="middle" font-weight="bold">25+</text>
+                                <text x="45" y="78" fill="rgba(255,255,255,0.5)" font-size="5" text-anchor="middle">Sites</text>
+                                <rect x="75" y="50" width="50" height="35" rx="4" fill="rgba(16, 185, 129, 0.2)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1"/>
+                                <text x="100" y="65" fill="#10b981" font-size="10" text-anchor="middle" font-weight="bold">200+</text>
+                                <text x="100" y="78" fill="rgba(255,255,255,0.5)" font-size="5" text-anchor="middle">Users</text>
+                                <rect x="130" y="50" width="50" height="35" rx="4" fill="rgba(139, 92, 246, 0.2)" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1"/>
+                                <text x="155" y="65" fill="#8b5cf6" font-size="10" text-anchor="middle" font-weight="bold">50K</text>
+                                <text x="155" y="78" fill="rgba(255,255,255,0.5)" font-size="5" text-anchor="middle">Daily</text>
+                                <!-- Chart -->
+                                <polyline points="25,115 45,105 65,110 85,95 105,100 125,85 145,90 165,80" stroke="#10b981" stroke-width="2" fill="none"/>
+                                <circle cx="165" cy="80" r="3" fill="#10b981"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">IoT + Mobile</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">CEMS</h3>
+                        <p class="project-subtitle">Construction Environmental Monitoring Software</p>
+                        <p class="project-description">
+                            Cross-platform Flutter application monitoring 25+ construction sites with real-time
+                            IoT sensor integration for water, waste, and environmental compliance tracking.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Microservices backend supporting <strong>200+ concurrent users</strong></li>
+                            <li>Processing <strong>50,000+ daily transactions</strong></li>
+                            <li>TensorFlow ML models preventing 15+ equipment failures</li>
+                            <li>Reduced compliance reporting from 4 hours to 15 minutes</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>TensorFlow</span>
+                            <span>AWS</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">30%</span>
+                                <span class="metric-label">Water Waste Reduced</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">95%</span>
+                                <span class="metric-label">Less Manual Entry</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Smart Surveillance -->
+                <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-visual">
+                            <!-- AI Vision Mockup -->
+                            <svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Camera Feed Frame -->
+                                <rect x="15" y="15" width="170" height="110" rx="8" fill="rgba(6, 182, 212, 0.1)" stroke="rgba(6, 182, 212, 0.3)" stroke-width="1"/>
+                                <!-- Detection Box 1 -->
+                                <rect x="30" y="40" width="45" height="60" rx="2" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="4 2"/>
+                                <rect x="30" y="35" width="30" height="8" rx="2" fill="#10b981"/>
+                                <text x="45" y="41" fill="white" font-size="5" text-anchor="middle">HELMET ✓</text>
+                                <!-- Detection Box 2 -->
+                                <rect x="90" y="35" width="40" height="55" rx="2" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 2"/>
+                                <rect x="90" y="30" width="35" height="8" rx="2" fill="#f59e0b"/>
+                                <text x="107" y="36" fill="white" font-size="5" text-anchor="middle">NO VEST!</text>
+                                <!-- Detection Box 3 -->
+                                <rect x="140" y="45" width="35" height="50" rx="2" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="4 2"/>
+                                <rect x="140" y="40" width="25" height="8" rx="2" fill="#10b981"/>
+                                <text x="152" y="46" fill="white" font-size="5" text-anchor="middle">PPE ✓</text>
+                                <!-- AI Badge -->
+                                <circle cx="170" cy="25" r="10" fill="rgba(139, 92, 246, 0.3)" stroke="#8b5cf6" stroke-width="1"/>
+                                <text x="170" y="28" fill="#8b5cf6" font-size="6" text-anchor="middle" font-weight="bold">AI</text>
+                                <!-- Accuracy -->
+                                <rect x="20" y="105" width="60" height="15" rx="3" fill="rgba(16, 185, 129, 0.2)"/>
+                                <text x="50" y="115" fill="#10b981" font-size="7" text-anchor="middle">92% Accuracy</text>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">AI / Computer Vision</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Smart Surveillance System</h3>
+                        <p class="project-subtitle">AI-Powered Safety Monitoring</p>
+                        <p class="project-description">
+                            Automated safety monitoring using YOLO v5 and OpenCV to detect PPE compliance
+                            across multiple camera feeds, protecting 500+ construction site personnel.
+                        </p>
+                        <ul class="project-highlights">
+                            <li><strong>92% accuracy</strong> in PPE detection (hard hats, vests, gloves)</li>
+                            <li>Real-time alerts reducing violation response time by 65%</li>
+                            <li>Analytics dashboard for compliance trends and patterns</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>YOLO v5</span>
+                            <span>OpenCV</span>
+                            <span>TensorFlow</span>
+                            <span>Flask</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">92%</span>
+                                <span class="metric-label">Detection Accuracy</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Wildlife Protection -->
+                <article class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <div class="project-visual">
+                            <!-- IoT Sensor Network Mockup -->
+                            <svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Map Background -->
+                                <rect x="10" y="10" width="180" height="120" rx="8" fill="rgba(16, 185, 129, 0.05)" stroke="rgba(16, 185, 129, 0.2)" stroke-width="1"/>
+                                <!-- Grid Lines -->
+                                <line x1="10" y1="50" x2="190" y2="50" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                                <line x1="10" y1="90" x2="190" y2="90" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                                <line x1="70" y1="10" x2="70" y2="130" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                                <line x1="130" y1="10" x2="130" y2="130" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                                <!-- Sensor Nodes -->
+                                <circle cx="40" cy="35" r="12" fill="rgba(16, 185, 129, 0.3)" stroke="#10b981" stroke-width="2"/>
+                                <circle cx="40" cy="35" r="6" fill="#10b981"/>
+                                <circle cx="100" cy="70" r="15" fill="rgba(6, 182, 212, 0.3)" stroke="#06b6d4" stroke-width="2"/>
+                                <circle cx="100" cy="70" r="8" fill="#06b6d4"/>
+                                <circle cx="160" cy="45" r="10" fill="rgba(139, 92, 246, 0.3)" stroke="#8b5cf6" stroke-width="2"/>
+                                <circle cx="160" cy="45" r="5" fill="#8b5cf6"/>
+                                <circle cx="55" cy="100" r="11" fill="rgba(245, 158, 11, 0.3)" stroke="#f59e0b" stroke-width="2"/>
+                                <circle cx="55" cy="100" r="5" fill="#f59e0b"/>
+                                <circle cx="145" cy="105" r="12" fill="rgba(16, 185, 129, 0.3)" stroke="#10b981" stroke-width="2"/>
+                                <circle cx="145" cy="105" r="6" fill="#10b981"/>
+                                <!-- Connection Lines -->
+                                <line x1="40" y1="35" x2="100" y2="70" stroke="rgba(16, 185, 129, 0.4)" stroke-width="1" stroke-dasharray="4 2"/>
+                                <line x1="100" y1="70" x2="160" y2="45" stroke="rgba(6, 182, 212, 0.4)" stroke-width="1" stroke-dasharray="4 2"/>
+                                <line x1="100" y1="70" x2="55" y2="100" stroke="rgba(6, 182, 212, 0.4)" stroke-width="1" stroke-dasharray="4 2"/>
+                                <line x1="100" y1="70" x2="145" y2="105" stroke="rgba(6, 182, 212, 0.4)" stroke-width="1" stroke-dasharray="4 2"/>
+                                <!-- Alert Badge -->
+                                <rect x="140" y="15" width="45" height="18" rx="4" fill="rgba(239, 68, 68, 0.2)" stroke="#ef4444" stroke-width="1"/>
+                                <text x="162" y="27" fill="#ef4444" font-size="7" text-anchor="middle">ALERT!</text>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">IoT + Mobile</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Laser Perimeter Fencing</h3>
+                        <p class="project-subtitle">Wildlife Conflict Prevention System</p>
+                        <p class="project-description">
+                            Automated protection system using laser detection and PIR sensors to mitigate
+                            human-elephant conflicts, with instant alerts to 100+ local residents.
+                        </p>
+                        <ul class="project-highlights">
+                            <li><strong>95% detection accuracy</strong> within 50-meter range</li>
+                            <li>IoT network with Arduino and Raspberry Pi</li>
+                            <li>SMS and push notifications with location tracking</li>
+                            <li>Reduced wildlife conflict response time by 80%</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Google Maps</span>
+                            <span>Arduino</span>
+                            <span>Raspberry Pi</span>
+                        </div>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">80%</span>
+                                <span class="metric-label">Faster Response</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Technical Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skills-category" data-aos="fade-up">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">React.js</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Flutter</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Angular</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TypeScript</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+                        </div>
+                    </div>
+                    <div class="tech-icons">
+                        <div class="tech-icon" title="Redux">
+                            <svg viewBox="0 0 24 24" fill="#764ABC"><path d="M16.634 16.504c.87-.075 1.543-.818 1.5-1.705-.043-.903-.784-1.604-1.687-1.604h-.061c-.933.031-1.665.809-1.634 1.742.031.45.211.843.471 1.124-.998 1.97-2.52 3.416-4.805 4.629-1.543.816-3.145 1.109-4.746.916-1.316-.153-2.344-.682-3.014-1.574-.992-1.327-1.103-2.777-.322-4.237.57-1.047 1.455-1.82 2.076-2.24-.119-.38-.298-1.021-.418-1.491-4.398 3.148-3.948 7.406-2.602 9.402.99 1.472 3.006 2.391 5.238 2.391.584 0 1.169-.06 1.753-.18 3.723-.694 6.549-2.844 8.251-6.173zm4.31-3.926c-2.316-2.717-5.726-4.207-9.608-4.207h-.498c-.286-.553-.842-.921-1.477-.921h-.061c-.934.031-1.666.809-1.635 1.742.032.905.784 1.604 1.697 1.604h.061c.659-.022 1.226-.437 1.486-.975h.543c2.316 0 4.501.693 6.489 2.047 1.514 1.032 2.602 2.363 3.215 3.954.524 1.32.485 2.61-.119 3.69-.902 1.634-2.422 2.52-4.43 2.52-1.287 0-2.521-.391-3.164-.662-.271.24-.734.63-1.067.867 1.514.662 3.057 1.027 4.531 1.027 3.365 0 5.849-1.863 6.801-3.72.998-2.003.93-5.463-1.764-8.966zm-14.451 5.61c.032.904.785 1.603 1.698 1.603h.06c.934-.031 1.667-.808 1.635-1.742-.031-.903-.784-1.603-1.687-1.603h-.061c-.063 0-.139 0-.21.03-1.233-2.063-1.754-4.313-1.574-6.737.135-1.82.709-3.4 1.705-4.691.827-1.078 2.428-1.6 3.494-1.634 3.005-.06 4.275 3.691 4.366 5.188l1.514.437c-.376-5.04-3.504-7.439-6.071-7.439-2.398 0-4.594 1.741-5.481 4.313-1.195 3.447-.421 6.762.784 9.39-.15.21-.24.48-.211.78z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="Material-UI">
+                            <svg viewBox="0 0 24 24" fill="#007FFF"><path d="M0 2.475v10.39l3 1.733V7.67l6 3.465 6-3.465v3.465l-6 3.463v3.464l6 3.463 9-5.195V9.402l-3 1.733v3.463l-6 3.464-3-1.732 6-3.465V2.475L9 7.67 0 2.475zm24 0l-3 1.73V7.67l3-1.732V2.475z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="Tailwind CSS">
+                            <svg viewBox="0 0 24 24" fill="#06B6D4"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="HTML5">
+                            <svg viewBox="0 0 24 24" fill="#E34F26"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                                <line x1="6" y1="6" x2="6.01" y2="6"/>
+                                <line x1="6" y1="18" x2="6.01" y2="18"/>
+                            </svg>
+                        </div>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js / Express</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python (Django/Flask)</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="88"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">RESTful APIs</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="95"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">WebSockets</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+                        </div>
+                    </div>
+                    <div class="tech-icons">
+                        <div class="tech-icon" title="GraphQL">
+                            <svg viewBox="0 0 24 24" fill="#E10098"><path d="M12.002 0a2.138 2.138 0 100 4.277 2.138 2.138 0 100-4.277zm-8.54 4.423a2.138 2.138 0 100 4.277 2.138 2.138 0 100-4.277zm17.08 0a2.138 2.138 0 100 4.277 2.138 2.138 0 100-4.277zM2.002 9.46l9.998 5.777V24l-9.998-5.773zm19.996 0v8.77L12.002 24v-8.763zm-10.006.063L2.08 15.298l-.002-8.462 9.914 5.726zm.012 0l9.912-5.726v8.462l-9.912 5.727z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="Socket.io">
+                            <svg viewBox="0 0 24 24" fill="#FFFFFF"><path d="M11.936 0A12 12 0 000 12a12 12 0 0012.064 12A12 12 0 0024 12 12 12 0 0011.936 0zm5.147 6.492c.103 0 .193.08.212.182l.007.051-.002.042-.485 5.316a.225.225 0 01-.217.198l-.042-.003-.041-.013-3.082-1.388a.225.225 0 01-.133-.227l.008-.04.018-.038 3.557-3.92a.225.225 0 01.2-.16zm-10.066.934c.107 0 .2.076.22.178l.006.043v.042l.485 5.316a.225.225 0 01-.175.229l-.042.006-.041-.005-3.557-1.603a.225.225 0 01-.137-.229l.008-.039.018-.037 3.082-3.748a.225.225 0 01.133-.153zm5.919 3.63l3.082 1.388a.225.225 0 01.133.227l-.008.04-.018.038-3.557 3.92a.225.225 0 01-.373-.073l-.006-.05.002-.043.485-5.316a.225.225 0 01.26-.131zm-1.772 0a.225.225 0 01.217.198l-.007.051.485 5.316a.225.225 0 01-.167.232l-.05.004a.225.225 0 01-.175-.087l-3.557-3.92a.225.225 0 01-.022-.268l.03-.035.042-.03 3.082-1.388a.225.225 0 01.122-.073z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="JWT">
+                            <svg viewBox="0 0 24 24" fill="#FB015B"><path d="M10.2 0v6.456L12 9.778l1.8-3.322V0h-3.6zm3.6 24v-6.456L12 14.222l-1.8 3.322V24h3.6zM0 10.2h6.456L9.778 12l-3.322 1.8H0v-3.6zm24 3.6h-6.456L14.222 12l3.322-1.8H24v3.6zM2.271 2.271l4.567 4.567 2.545-.926.926-2.545-4.567-4.567-3.471 3.471zm19.458 19.458l-4.567-4.567-2.545.926-.926 2.545 4.567 4.567 3.471-3.471zM2.271 21.729l3.471 3.471 4.567-4.567-.926-2.545-2.545-.926-4.567 4.567zm19.458-19.458l-3.471-3.471-4.567 4.567.926 2.545 2.545.926 4.567-4.567z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="Express.js">
+                            <svg viewBox="0 0 24 24" fill="#EEEEEE"><path d="M24 18.588a1.529 1.529 0 01-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 01-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 011.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 011.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 000 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 002.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 01-2.589 3.957 6.272 6.272 0 01-7.306-.933 6.575 6.575 0 01-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 010 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                            </svg>
+                        </div>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="92"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Redis</span>
+                            <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
+                        </div>
+                    </div>
+                    <div class="tech-icons">
+                        <div class="tech-icon" title="PostgreSQL">
+                            <svg viewBox="0 0 24 24" fill="#4169E1"><path d="M23.5587 14.7467c-.2933-.5333-1.0133-.7333-1.5867-.4933-1.56.72-2.8133.1333-3.4533-.3067.0533-.12.1067-.24.16-.36 1.0133-2.2133 1.6667-4.5733 1.8533-6.2133.2667-2.44-.28-3.8-.6-4.3867-.9067-1.6533-2.24-2.7467-3.8667-3.16-1.24-.3067-2.6267-.2267-3.9733.2267-.0667.0133-.1333.0133-.2.0267-.8533-.44-2.48-1.12-4.3867-1.04-1.9467.08-3.6133.92-4.8267 2.4267-.7467.9333-1.8933 2.84-1.8267 6.24.04 1.8.36 3.7333.9467 5.76.5733 1.9733 1.2933 3.6267 2.1333 4.92.96 1.48 2.0267 2.32 3.1867 2.4933.3467.0533.7067.0533 1.0533 0 .28-.0533.56-.1333.84-.24 1.0667 1.0267 2.5067 1.6 4.1867 1.6l.3067-.0133c1.2-.0533 2.2667-.4533 3.12-1.1733.2133.1333.4667.2533.7733.3467.4667.1333.9467.2 1.4267.2.3467 0 .6933-.0267 1.04-.08.8133-.1333 1.52-.4267 2.0667-.8533.0667-.0533.1333-.1067.2-.1733.0533-.0533.1067-.1067.1467-.16.4-.4933.6267-1.1067.6267-1.7867 0-.4133-.1067-.8133-.3067-1.1867zm-7.4933-12.16c1.2133 0 2.2933.4 3.1067 1.1467.12.12.2267.24.3267.3733.48.64.7867 1.4533.7867 2.4267 0 .36-.04.7333-.1333 1.1333-.1733.6933-.5067 1.6267-1.0667 2.68-.0667-.04-.1467-.0667-.2267-.0933-.0533-.0133-.1067-.0267-.16-.0533-.3867-.1467-.72-.2533-.9467-.3067-.2933-.0667-.5467-.1067-.7467-.1333-.3733-.0533-.68-.08-.8667-.08-.4133 0-.7867.04-1.1333.12-.4133.0933-.7867.24-1.1067.4667-.0133-.0667-.0267-.1333-.0533-.2-.0267-.0933-.0533-.2-.0667-.32l-.04-.4c-.2533-2.0933.1867-4.68.76-5.88.4133-.8667 1.04-1.32 1.5733-1.4667.1467-.0267.2933-.0267.4533-.0267zm-12.4267 6.8c-.0933-2.6933.6533-4.3333 1.3333-5.1733.96-1.1867 2.2933-1.84 3.8533-1.8933 1.56-.0533 2.92.5333 3.6533.8933-.0533.04-.1067.0667-.16.1067-.3067.2267-.5867.4933-.8267.8-.0667.08-.12.16-.1733.2533-.3867-.08-.7867-.1333-1.1867-.1333-2.8267 0-4.4533 2.6533-4.8533 5.1067-.3333 2.04-.0933 4.28.64 5.88-.5067.72-1.0667 1.9333-1.2267 2.9867-.0267.1733-.0533.3467-.0667.5333-.4667-.92-.8667-1.96-1.1867-3.0533-.5333-1.84-.8533-3.6-.8-5.2533zm6.6267 10.0133c-.6533 0-1.1867-.4667-1.64-1.16-.5067-.7733-.9067-1.8533-1.1467-2.92-.24-1.0667-.3333-2.1333-.2667-3.0667.0667-.8933.28-1.6.5733-2.0533.2933-.4533.6933-.6667 1.16-.7067.2267-.0133.48.0133.76.0667.4133.08.88.24 1.3333.48-.0267.08-.0533.1467-.08.2267-.0933.28-.1733.5867-.2267.92-.0533.3333-.0933.68-.0933 1.04 0 .2133.0133.4267.04.64.08.7067.2933 1.36.6267 1.9333.08.1333.1733.2667.28.4-.04.0133-.08.0133-.12.0267-.2267.0533-.48.12-.76.2267-.36.1333-.7333.3333-1.08.64-.4133.3733-.72.8933-.8133 1.5867-.0533.3733 0 .7067.0933 1.0133.0133.0533.0267.1067.0533.16.0133.0533.04.1067.0667.16-.2933.0133-.5867-.0133-.8667-.0933zm4.3733-.1067c-.1733.0533-.36.0933-.56.1067-.2133.0133-.4533-.0133-.7467-.0667-.36-.0667-.6533-.1867-.8533-.3333-.1333-.1-.2267-.2133-.28-.36-.0667-.1467-.08-.32-.0533-.5467.0267-.28.12-.48.2933-.6667.1733-.1867.4-.32.6-.4133.2-.0933.4-.16.56-.2l.0267-.0133c.5333-.1733 1.0533-.24 1.52-.24.2 0 .3867.0133.56.04.2.0267.3867.0667.56.12.08.0267.16.0533.24.08l.28.12c-.08.24-.1733.48-.28.7067-.28.6-.6533 1.12-1.1067 1.5067-.1867.16-.4533.32-.76.4533zm2.76-1.84c-.0533.08-.12.16-.2.24-.2533-.4533-.6133-.84-1.0667-1.12l.0267-.1467c.0533-.2533.1467-.48.28-.68.1333-.2.3333-.4.6-.52.24-.1067.5467-.1333.8933-.0667.1333.0267.28.0533.44.1067.04.0133.0933.04.1467.0667.0533.0133.1067.04.16.0667 0 .0267-.0133.0533-.0133.08-.0667.4267-.2667.8267-.56 1.1467-.1067.1067-.2133.2133-.3333.3067-.12.1067-.2533.2-.4.28z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="MongoDB">
+                            <svg viewBox="0 0 24 24" fill="#47A248"><path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="MySQL">
+                            <svg viewBox="0 0 24 24" fill="#4479A1"><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.063h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.723-1.01 1.084-1.583 1.084-.16 0-.36-.04-.6-.12v-.48c.12.027.238.04.353.04.248 0 .454-.074.618-.223.196-.176.294-.372.294-.588 0-.168-.064-.47-.193-.903l-1.02-3.27h.856l.622 2.108c.16.52.24.872.24 1.056 0 .088-.014.168-.042.24l.58-1.72.377-1.684h.807zm8.734 4.08h-2.89v-5.53h.894v4.72h1.996v.81zm-4.168 0h-.9v-5.53h.9v5.53zm-1.87-2.735c.378-.366.567-.82.567-1.36 0-.54-.19-.994-.567-1.36-.38-.366-.866-.55-1.46-.55-.593 0-1.08.184-1.46.55-.378.366-.566.82-.566 1.36 0 .54.188.994.566 1.36.38.366.867.55 1.46.55.594 0 1.08-.184 1.46-.55zm-.207-2.27c.217.24.325.534.325.887 0 .354-.108.648-.325.888-.217.24-.503.36-.858.36-.356 0-.642-.12-.86-.36-.216-.24-.325-.534-.325-.888 0-.353.11-.647.326-.887.217-.24.503-.36.86-.36.354 0 .64.12.857.36z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="Redis">
+                            <svg viewBox="0 0 24 24" fill="#DC382D"><path d="M10.5 2.661l.54.997-1.797.644 2.409.218.748 1.246.467-1.122 2.077-.208-1.61-.613.537-1.162-1.69.86zm-5.333 4.27l8.4 4.185-8.4 4.17zm8.4 4.185v8.68l9.25-4.46zm0 0L22.8 6.79zm1.564-5.066l2.852-.362.777 1.307.704-1.387 3.033-.313-2.312-.842 1.15-1.576-2.663.637-.907-1.26-.536 1.635-2.7.3 2.104.76z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/>
+                            </svg>
+                        </div>
+                        <h3>Cloud & DevOps</h3>
+                    </div>
+                    <div class="tech-icons-grid">
+                        <div class="tech-icon-large" title="AWS">
+                            <svg viewBox="0 0 24 24" fill="#FF9900"><path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 01-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 01-.287-.375 6.18 6.18 0 01-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 01-.28.104.488.488 0 01-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 01.224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 011.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 00-.735-.136 6.02 6.02 0 00-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 01-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 01.32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 01.311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 01-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 01-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 01-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 00.415-.758.777.777 0 00-.215-.559c-.144-.151-.416-.287-.807-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 01-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 01.24.2.43.43 0 01.071.263v.375c0 .168-.064.256-.184.256a.83.83 0 01-.303-.096 3.652 3.652 0 00-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167zM21.698 16.207c-2.626 1.94-6.442 2.969-9.722 2.969-4.598 0-8.74-1.7-11.87-4.526-.247-.223-.024-.527.27-.351 3.384 1.963 7.559 3.153 11.877 3.153 2.914 0 6.114-.607 9.06-1.852.439-.2.814.287.385.607zM22.792 14.961c-.336-.43-2.22-.207-3.074-.103-.255.032-.295-.192-.063-.36 1.5-1.053 3.967-.75 4.254-.399.287.36-.08 2.826-1.485 4.007-.215.184-.423.088-.327-.151.32-.79 1.03-2.57.695-2.994z"/></svg>
+                            <span>AWS</span>
+                        </div>
+                        <div class="tech-icon-large" title="Docker">
+                            <svg viewBox="0 0 24 24" fill="#2496ED"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288z"/></svg>
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-icon-large" title="Kubernetes">
+                            <svg viewBox="0 0 24 24" fill="#326CE5"><path d="M10.204 14.35l.007.01-.999 2.413a5.171 5.171 0 01-2.075-2.597l2.578-.437.004.005a.44.44 0 01.485.606zm-.833-2.129a.44.44 0 00.173-.756l.002-.011L7.585 9.7a5.143 5.143 0 00-.73 3.255l2.514-.725.002-.009zm1.145-1.98a.44.44 0 00.699-.337l-.01-.006.3-2.556a5.273 5.273 0 00-2.922 1.506l1.928 1.387.005.006zm1.963 1.515a.44.44 0 00.699.337l.006.005 1.928-1.386a5.282 5.282 0 00-2.922-1.507l.3 2.557-.011-.006zm1.18 1.37a.44.44 0 00.173.756l.002.011 2.514.725a5.143 5.143 0 00-.73-3.255l-1.961 1.754.002.009zM10.88 16.67l-.002.005-.578.487a5.28 5.28 0 003.4 0l-.578-.487-.002-.005a.378.378 0 00-.49 0l-.003.004-.003-.004a.378.378 0 00-.49 0l-.003.004-.003-.004a.378.378 0 00-.247 0zm2.726-1.2l-.007.01.999 2.413a5.171 5.171 0 002.075-2.597l-2.578-.437-.004.005a.44.44 0 00-.485.606zm-2.062-1.755a.44.44 0 00-.594 0l-.004.003-1.928 1.387a5.282 5.282 0 002.922 1.506l-.3-2.557-.01.006.914-.345zm1.436 0l.914.345-.01-.006-.3 2.557a5.282 5.282 0 002.922-1.506l-1.928-1.387-.004-.003a.44.44 0 00-.594 0zM12 7.619a.375.375 0 00.375-.375V5.173a5.153 5.153 0 00-2.375 1.1l1.47 1.055a.44.44 0 00.53.291zm0 1.286a.375.375 0 00-.375.375v2.071a.44.44 0 00.75 0V9.28a.375.375 0 00-.375-.375zm0-3.732a6.877 6.877 0 00-6.875 6.875 6.877 6.877 0 006.875 6.875 6.877 6.877 0 006.875-6.875A6.877 6.877 0 0012 5.173zm0 15.054c-4.511 0-8.18-3.669-8.18-8.18S7.489 3.868 12 3.868s8.18 3.669 8.18 8.18-3.669 8.179-8.18 8.179z"/></svg>
+                            <span>Kubernetes</span>
+                        </div>
+                        <div class="tech-icon-large" title="Git">
+                            <svg viewBox="0 0 24 24" fill="#F05032"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/></svg>
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-icon-large" title="GitHub Actions">
+                            <svg viewBox="0 0 24 24" fill="#2088FF"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            <span>CI/CD</span>
+                        </div>
+                        <div class="tech-icon-large" title="Nginx">
+                            <svg viewBox="0 0 24 24" fill="#009639"><path d="M12 0L1.605 6v12L12 24l10.395-6V6L12 0zm6 16.59c0 .705-.646 1.29-1.529 1.29-.631 0-1.351-.255-1.801-.81l-4.05-4.92v4.44c0 .705-.63 1.29-1.53 1.29H9c-.9 0-1.53-.585-1.53-1.29V7.41c0-.705.63-1.29 1.53-1.29.63 0 1.35.255 1.8.81l4.05 4.92V7.41c0-.705.63-1.29 1.53-1.29h.09c.9 0 1.53.585 1.53 1.29v9.18z"/></svg>
+                            <span>Nginx</span>
+                        </div>
+                        <div class="tech-icon-large" title="Azure">
+                            <svg viewBox="0 0 24 24" fill="#0078D4"><path d="M5.483 21.3H24L14.025 4.013l-3.038 8.347 5.836 6.938L5.483 21.3zM13.23 2.7L6.105 8.677 0 19.253h5.505v.014L13.23 2.7z"/></svg>
+                            <span>Azure</span>
+                        </div>
+                        <div class="tech-icon-large" title="Vercel">
+                            <svg viewBox="0 0 24 24" fill="#FFFFFF"><path d="M24 22.525H0l12-21.05 12 21.05z"/></svg>
+                            <span>Vercel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category full-width" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>ML & Specialized</h3>
+                    </div>
+                    <div class="tech-icons-wrap">
+                        <div class="tech-icon" title="TensorFlow">
+                            <svg viewBox="0 0 24 24" fill="#FF6F00"><path d="M1.292 5.856L11.54 0v24l-4.095-2.378V7.603l-6.168 3.564.015-5.31zm21.43 5.311l-6.154-3.564v8.71l-4.106 2.378V0l10.25 5.856.01 5.311z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="PyTorch">
+                            <svg viewBox="0 0 24 24" fill="#EE4C2C"><path d="M12.005 0L4.952 7.053a9.865 9.865 0 000 14.022 9.866 9.866 0 0014.022 0c3.984-3.9 3.984-10.205 0-14.105l-1.236 1.236a8.143 8.143 0 012.309 5.871c-.083 4.406-3.734 7.89-8.14 7.89a8.14 8.14 0 01-8.14-8.14c0-2.176.825-4.268 2.31-5.87l4.691-4.609v5.62l-2.56 2.56c-.49.49-.49 1.32 0 1.81.49.49 1.32.49 1.81 0l4.183-4.184V0h-.196zM16.766 3.379a1.5 1.5 0 100 3 1.5 1.5 0 000-3z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="scikit-learn">
+                            <svg viewBox="0 0 24 24" fill="#F7931E"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.824a9.176 9.176 0 110 18.352 9.176 9.176 0 010-18.352z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="OpenCV">
+                            <svg viewBox="0 0 24 24" fill="#5C3EE8"><path d="M11.8 0C9.59.03 7.47.81 5.73 2.2A9.66 9.66 0 001.08 9.6c-.37 2.88.38 5.82 2.09 8.18a9.84 9.84 0 006.86 4.12c.45.06.9.09 1.34.09 1.53.01 3.03-.36 4.38-1.06 1.84-.96 3.35-2.48 4.27-4.32a9.6 9.6 0 00.84-5.65 9.81 9.81 0 00-3.08-5.85A9.73 9.73 0 0011.8 0zm-.11 3.57c.87.01 1.75.16 2.57.45 1.5.52 2.82 1.47 3.78 2.71.96 1.25 1.53 2.76 1.64 4.34.11 1.58-.24 3.17-1.01 4.55a7.53 7.53 0 01-3.38 3.12c-1.38.67-2.93.91-4.44.67a7.48 7.48 0 01-4.07-2.07 7.33 7.33 0 01-2.15-3.92c-.35-1.56-.2-3.2.42-4.67a7.37 7.37 0 012.92-3.44 7.41 7.41 0 013.72-1.74z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="YOLO">
+                            <svg viewBox="0 0 24 24" fill="#00FFFF"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="Computer Vision">
+                            <svg viewBox="0 0 24 24" fill="#4285F4"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="IoT">
+                            <svg viewBox="0 0 24 24" fill="#10B981"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16zm0-14a6 6 0 100 12 6 6 0 000-12zm0 10a4 4 0 110-8 4 4 0 010 8zm0-6a2 2 0 100 4 2 2 0 000-4z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="Real-time Systems">
+                            <svg viewBox="0 0 24 24" fill="#06B6D4"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="Agile/Scrum">
+                            <svg viewBox="0 0 24 24" fill="#0052CC"><path d="M11.24 24a.94.94 0 01-.94-.94V.94a.94.94 0 011.88 0v22.12c0 .52-.42.94-.94.94zm6.58-11.76a.94.94 0 01-.94-.94V.94a.94.94 0 011.88 0v10.36c0 .52-.42.94-.94.94zm-13.16 0a.94.94 0 01-.94-.94V.94a.94.94 0 011.88 0v10.36c0 .52-.42.94-.94.94zM17.82 24a.94.94 0 01-.94-.94v-4.7a.94.94 0 011.88 0v4.7c0 .52-.42.94-.94.94zM4.66 24a.94.94 0 01-.94-.94v-4.7a.94.94 0 011.88 0v4.7c0 .52-.42.94-.94.94z"/></svg>
+                        </div>
+                        <div class="tech-icon" title="System Design">
+                            <svg viewBox="0 0 24 24" fill="#6366F1"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm8-2h8v8h-8v-8zm2 2v4h4v-4h-4z"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section achievements">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Results</span>
+                <h2 class="section-title">Impact & Achievements</h2>
+                <p class="section-subtitle">
+                    Measurable outcomes that demonstrate my ability to deliver business value
+                </p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card" data-aos="fade-up">
+                    <div class="achievement-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <div class="achievement-value">5</div>
+                    <div class="achievement-label">Enterprise Projects</div>
+                    <p class="achievement-desc">Delivered 20% ahead of schedule with 95% code quality metrics</p>
+                </div>
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="achievement-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M16 8l-4 4-4-4"/>
+                            <path d="M12 12v6"/>
+                        </svg>
+                    </div>
+                    <div class="achievement-value">35%</div>
+                    <div class="achievement-label">Cloud Cost Reduction</div>
+                    <p class="achievement-desc">Through strategic AWS to Azure migration and resource optimization</p>
+                </div>
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="achievement-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <div class="achievement-value">75%</div>
+                    <div class="achievement-label">Faster Deployments</div>
+                    <p class="achievement-desc">Implemented CI/CD pipeline and automated testing framework</p>
+                </div>
+                <div class="achievement-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="achievement-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <div class="achievement-value">2</div>
+                    <div class="achievement-label">Developers Mentored</div>
+                    <p class="achievement-desc">Improved their code quality and productivity by 40%</p>
+                </div>
+            </div>
+            <div class="key-metrics" data-aos="fade-up">
+                <h3>Key Performance Metrics</h3>
+                <div class="metrics-row">
+                    <div class="metric-item">
+                        <span class="metric-number">99.9%</span>
+                        <span class="metric-text">API Uptime</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number">500+</span>
+                        <span class="metric-text">Concurrent Users</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number">10,000+</span>
+                        <span class="metric-text">Daily Transactions</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number">&lt;100ms</span>
+                        <span class="metric-text">Response Latency</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Background</span>
+                <h2 class="section-title">Education & Certifications</h2>
+            </div>
+            <div class="education-content">
+                <div class="education-card main" data-aos="fade-up">
+                    <div class="education-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                    <div class="education-details">
+                        <span class="education-degree">Bachelor of Engineering</span>
+                        <h3 class="education-field">Computer Science Engineering</h3>
+                        <p class="education-institution">Malnad College of Engineering, Karnataka</p>
+                        <div class="education-meta">
+                            <!-- <span class="education-year">Graduated Aug 2024</span> -->
+                            <span class="education-grade">CGPA: 7.3 / 10</span>
+                        </div>
+                        <div class="coursework">
+                            <span>Data Structures & Algorithms</span>
+                            <span>Database Systems</span>
+                            <span>Machine Learning</span>
+                            <span>Cloud Computing</span>
+                            <span>Software Engineering</span>
+                            <span>Cyber Security</span>
+                            <span>Artificial Intelligence</span>
+                            <span>Computer Networks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="certifications" data-aos="fade-up">
+                <h3 class="cert-title">Certifications & Training</h3>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <div class="cert-badge google">G</div>
+                        <div class="cert-info">
+                            <span class="cert-name">Google Data Analytics Professional</span>
+                            <span class="cert-issuer">Google (Coursera)</span>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-badge google">G</div>
+                        <div class="cert-info">
+                            <span class="cert-name">Google Cyber Security Certificate</span>
+                            <span class="cert-issuer">Google (Coursera)</span>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-badge ml">ML</div>
+                        <div class="cert-info">
+                            <span class="cert-name">Machine Learning Specialization</span>
+                            <span class="cert-issuer">Inventron Technologies (2022)</span>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-badge aws">AWS</div>
+                        <div class="cert-info">
+                            <span class="cert-name">AWS Cloud Practitioner</span>
+                            <span class="cert-issuer">In Progress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">
+                    I'm currently looking for new opportunities. Whether you have a position
+                    to discuss or just want to connect, I'd love to hear from you.
+                </p>
+            </div>
+            <div class="contact-content" data-aos="fade-up">
+                <div class="contact-info">
+                    <a href="mailto:thanushdinesh04@gmail.com" class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">thanushdinesh04@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="tel:+919980993104" class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Phone</span>
+                            <span class="contact-value">+91 9980993104</span>
+                        </div>
+                    </a>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Location</span>
+                            <span class="contact-value">Bengaluru, India</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/thanush-bd" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/thanush-bd" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="cta-hire">
+                    <a href="mailto:thanushdinesh04@gmail.com?subject=Job Opportunity" class="btn btn-primary btn-large">
+                        <span>Let's Talk</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper" data-aos="fade-up">
+                <div class="form-header">
+                    <h3>Send Me a Message</h3>
+                    <p>Fill out the form below and I'll get back to you as soon as possible.</p>
+                </div>
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/xldrkkgq" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="your.email@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject" placeholder="What's this about?">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="5" placeholder="Your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large form-submit">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </button>
+                </form>
+                <p id="contact-form-status" class="form-status"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    Designed & Built by <span class="highlight">Thanush BD</span>
+                </p>
+                <p class="footer-copyright">
+                    2025 All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
