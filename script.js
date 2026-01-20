@@ -517,6 +517,128 @@ class PageLoader {
 }
 
 // ============================================
+// CUSTOM CURSOR
+// ============================================
+class CustomCursor {
+    constructor() {
+        this.cursorDot = document.querySelector('[data-cursor-dot]');
+        this.cursorOutline = document.querySelector('[data-cursor-outline]');
+
+        if (this.cursorDot && this.cursorOutline) {
+            this.init();
+        }
+    }
+
+    init() {
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            // Dot follows instantly
+            this.cursorDot.style.left = `${posX}px`;
+            this.cursorDot.style.top = `${posY}px`;
+
+            // Outline follows with slight delay
+            this.cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+        });
+
+        // Hover effects
+        const interactiveElements = document.querySelectorAll('a, button, .project-card, input, textarea');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                this.cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                this.cursorOutline.style.backgroundColor = 'rgba(16, 185, 129, 0.1)';
+            });
+            el.addEventListener('mouseleave', () => {
+                this.cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+                this.cursorOutline.style.backgroundColor = 'transparent';
+            });
+        });
+    }
+}
+
+// ============================================
+// MAGNETIC BUTTONS
+// ============================================
+class MagneticButtons {
+    constructor() {
+        this.buttons = document.querySelectorAll('.btn, .nav-link, .social-link');
+        this.init();
+    }
+
+    init() {
+        this.buttons.forEach(btn => {
+            btn.classList.add('magnetic-btn');
+
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+
+                btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+            });
+
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0px, 0px)';
+            });
+        });
+    }
+}
+
+// ============================================
+// CONTACT FORM HANDLING
+// ============================================
+class ContactForm {
+    constructor() {
+        this.form = document.getElementById('contact-form');
+        this.status = document.getElementById('contact-form-status');
+        if (this.form) this.init();
+    }
+
+    init() {
+        this.form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = new FormData(e.target);
+            const submitBtn = this.form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+
+            // Loading state
+            submitBtn.innerHTML = 'Sending...';
+            submitBtn.disabled = true;
+
+            try {
+                const response = await fetch(e.target.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    this.status.innerHTML = "Thanks! Your message has been sent.";
+                    this.status.className = 'form-status success';
+                    this.form.reset();
+                } else {
+                    const errorData = await response.json();
+                    this.status.innerHTML = errorData.errors ? errorData.errors.map(err => err.message).join(", ") : "Oops! There was a problem sending your form";
+                    this.status.className = 'form-status error';
+                }
+            } catch (error) {
+                this.status.innerHTML = "Oops! There was a problem sending your form";
+                this.status.className = 'form-status error';
+            } finally {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+}
+
+// ============================================
 // SCROLL PROGRESS INDICATOR
 // ============================================
 class ScrollProgress {
@@ -598,6 +720,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize scroll progress
     new ScrollProgress();
+
+    // Initialize custom cursor
+    new CustomCursor();
+
+    // Initialize magnetic buttons
+    new MagneticButtons();
+
+    // Initialize contact form
+    new ContactForm();
 });
 
 // ============================================
